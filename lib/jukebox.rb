@@ -24,7 +24,7 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  input = gets.chomp()
+  input = gets.strip
 
   if (1..9).to_a.index(input.to_i) != nil
     puts "Playing #{songs[input.to_i - 1]}"
@@ -38,3 +38,7 @@ end
 def exit_jukebox
   puts "Goodbye"
 end
+
+def run
+  puts "Please enter a command"
+  user_input = gets.strip
