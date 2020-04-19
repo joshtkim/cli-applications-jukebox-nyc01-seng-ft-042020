@@ -28,7 +28,7 @@ def play(songs)
 
   if (1..9).to_a.index(input.to_i) != nil
     puts "Playing #{songs[input.to_i - 1]}"
-  elsif my_songs.index(input) != nil
+  elsif songs.index(input) != nil
     puts "Playing #{input}"
   else
     puts "Invalid input, please try again"
