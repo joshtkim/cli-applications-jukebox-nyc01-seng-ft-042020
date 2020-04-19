@@ -62,3 +62,4 @@ def run
     end
   end
   exit_jukebox
+end
