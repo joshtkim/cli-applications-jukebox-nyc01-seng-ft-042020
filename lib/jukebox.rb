@@ -42,13 +42,23 @@ end
 def run
   puts "Please enter a command"
   user_input = gets.strip
-  if user_input != "exit"
-  elsif user_input == "list"
-    list
-  elsif user_input == "play"
-    play
-  elsif user_input =="help"
-    help
+  while user_response != "exit"
+    case user_response
+      when "help"
+        help
+        puts "Please enter a command:"
+        user_response = gets.chomp
+      when "list"
+        list(songs)
+        puts "Please enter a command:"
+        user_response = gets.chomp
+      when "play"
+        play(songs)
+        puts "Please enter a command:"
+        user_response = gets.chomp
+      else
+        puts "Invalid input, please try again"
+        user_response = gets.chomp
+    end
   end
   exit_jukebox
-end
