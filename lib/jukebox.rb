@@ -42,16 +42,16 @@ end
 def run(songs)
   puts "Please enter a command"
   user_input = gets.strip
-  while user_response != "exit"
-    case user_response
+  while user_input != "exit"
+    case user_input
       when "help"
         help
         puts "Please enter a command:"
-        user_response = gets.chomp
+        user_input = gets.chomp
       when "list"
         list(songs)
         puts "Please enter a command:"
-        user_response = gets.chomp
+        user_input = gets.chomp
       when "play"
         play(songs)
         puts "Please enter a command:"
